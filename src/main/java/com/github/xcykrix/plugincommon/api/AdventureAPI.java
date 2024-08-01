@@ -44,6 +44,7 @@ public class AdventureAPI extends SimpleAPI implements Initialize, Shutdown {
      *
      * @return {@link BukkitAudiences}
      */
+    @SuppressWarnings({"unused", "This is a implementation-optional API."})
     public BukkitAudiences getAudiences() {
         if (this.adventure == null)
             throw new IllegalStateException("Unable to access AdventureAPI. BukkitAudiences is not initialized.");

@@ -70,6 +70,7 @@ public abstract class PluginCommon extends JavaPlugin implements Shutdown {
      *
      * @param earliestSupportedVersion The earliest MinecraftVersion that is supported by the plugin.
      */
+    @SuppressWarnings({"unused", "This is a implementation-optional API."})
     public void setEarliestSupportedVersion(MinecraftVersion earliestSupportedVersion) {
         this.earliestSupportedVersion = earliestSupportedVersion;
     }
