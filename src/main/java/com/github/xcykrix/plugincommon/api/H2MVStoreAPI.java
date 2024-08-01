@@ -46,6 +46,7 @@ public class H2MVStoreAPI extends SimpleAPI implements Initialize, Shutdown {
      *
      * @return {@link MVStore}
      */
+    @SuppressWarnings({"unused", "This is a implementation-optional API."})
     public MVStore getStore() {
         if (this.store == null)
             throw new IllegalStateException("Unable to access H2MVStoreAPI. MVStore is not initialized.");

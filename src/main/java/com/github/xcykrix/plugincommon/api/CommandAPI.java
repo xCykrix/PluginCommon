@@ -30,6 +30,7 @@ public class CommandAPI extends SimpleAPI {
      * @param baseCommand The BaseCommand.
      * @return {@link CommandAPI}
      */
+    @SuppressWarnings({"unused", "This is a implementation-optional API."})
     public CommandAPI register(BaseCommand baseCommand) {
         this.paperCommandManager.registerCommand(baseCommand);
         if (baseCommand instanceof Initialize) {
