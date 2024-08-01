@@ -40,6 +40,7 @@ public class ConfigurationAPI extends SimpleAPI {
      * @param resource The Resource.
      * @return {@link ConfigurationAPI}
      */
+    @SuppressWarnings({"UnusedReturnValue", "Used by API Digestee."})
     public ConfigurationAPI register(Resource resource) {
         try {
             yamlDocumentHashMap.put(resource.id(), YamlDocument.create(
@@ -57,6 +58,7 @@ public class ConfigurationAPI extends SimpleAPI {
         return this;
     }
 
+    @SuppressWarnings({"unused", "This is a implementation-optional API."})
     public ConfigurationAPI registerLanguageFile(InputStream inputStream) {
         this.register(new Resource("language.yml", null, inputStream));
         return this;
@@ -72,6 +74,7 @@ public class ConfigurationAPI extends SimpleAPI {
         return this.yamlDocumentHashMap.get(id);
     }
 
+    @SuppressWarnings({"unused", "This is a implementation-optional API."})
     public LanguageFile getLanguageFile() {
         if (this.languageFile == null) {
             YamlDocument yamlDocument = this.get("language.yml");
