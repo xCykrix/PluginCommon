@@ -19,30 +19,3 @@ jobs:
               run: mvn --batch-mode clean deploy
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-
-#name: "Java Continuous Integration"
-#
-#
-#
-#on:
-#    push:
-#        branches: [main, staging]
-#    pull_request:
-#        branches: [main, staging]
-#
-#jobs:
-#    validate:
-#        runs-on: ubuntu-latest
-#
-#        name: Java Maven Build
-#        steps:
-#            - uses: actions/checkout@v3
-#            - name: Set up JDK 17
-#              uses: actions/setup-java@v3
-#              with:
-#                  java-version: '17'
-#                  distribution: 'adopt'
-#                  architecture: x64
-#            - name: Compile
-#              run: "mvn --batch-mode --update-snapshots clean package"
